@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Will You Be My Boyfriend?</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #ffe6f0;
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      h1 {
+        color: #d6336c;
+        font-size: 2.5em;
+      }
+
+      .buttons {
+        margin-top: 40px;
+      }
+
+      button {
+        font-size: 1.2em;
+        padding: 15px 30px;
+        margin: 10px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      #yesBtn {
+        background-color: #ff6699;
+        color: white;
+      }
+
+      #noBtn {
+        background-color: #ffbaba;
+        color: black;
+        position: absolute;
+      }
+
+      #response {
+        margin-top: 30px;
+        font-size: 1.8em;
+        color: #28a745;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>hi eli 💖</h1>
+    <p>will you be my boyfriend?</p>
+    <p></p>
+    <div class="buttons">
+      <button id="yesBtn">Yes</button>
+      <button id="noBtn">No</button>
+    </div>
+
+    <div id="response">Yay! 🥰 I'm so happy!</div>
+
+    <script>
+      const noBtn = document.getElementById("noBtn");
+      const yesBtn = document.getElementById("yesBtn");
+      const response = document.getElementById("response");
+
+      yesBtn.onclick = () => {
+        response.style.display = "block";
+      };
+
+      noBtn.onmouseover = () => {
+        const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+        const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+        noBtn.style.left = `${x}px`;
+        noBtn.style.top = `${y}px`;
+      };
+    </script>
+  </body>
+</html>
